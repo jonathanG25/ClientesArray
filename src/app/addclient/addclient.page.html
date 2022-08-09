@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-icon slot="end" name="close-circle-sharp" (click)="cerrarModal()" ></ion-icon>
+    </ion-buttons>
+    <ion-title>Agregar nuevo cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h3>Ingrese una foto URL:</h3>
+      <ion-input id="txtfoto" name="txtfoto" [(value)]="foto" type="text" placeholder="https://webservise.com"></ion-input>
+      <h3>Nombre del cliente</h3>
+      <ion-input
+        type="text"
+        placeholder="Escribe un nombre y un apellido"
+        id="txtnombre" name="txtnombre" [(value)]="nombre"
+      ></ion-input>
+      <p>Telefono del Cliente</p>
+      <ion-input
+        type="text"
+        placeholder="Ingresa un numero telefonico"
+        id="txtcelular" name="txtcelular" [(value)]="celular"
+      ></ion-input>
+      <p>Direccion del Cliente</p>
+      <ion-input
+        type="text"
+        placeholder="Ingresa una direccion"
+        id="txtdireccion" name="txtdireccion" [(value)]="direccion"
+      ></ion-input>
+      <ion-button
+        color="primary"
+        (click)="guardarDatos()"
+        >Guardar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
